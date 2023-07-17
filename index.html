@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="font-poppin leading-[1.5] text-[#333] bg-[#f5f5f5]">
+    <div class=" mx-auto my-[30px]  max-w-[500px] p-5">
+        <header class="flex justify-start items-center mb-5">
+            <img src="./image/note.png" alt="">
+            <h1 class="font-[300] ml-[10px] text-[32px]">Shopping List</h1>
+        </header>
+        <form id="item-form">
+            <div class="item-control">
+                <input class="w-full text-[17px] mb-5 p-2 border-[1px] border-solid border-[#ccc] rounded-md outline-none" id="item-input" type="text" placeholder="Enter item">
+            </div>
+            <div id="form-control">
+                <button type="submit" id="btn" class="bg-[#333] text-[#fff] border-none rounded-md py-[5px] px-2 cursor-pointer hover:bg-[#444]">
+                    <i class="fa-solid fa-plus"></i> Add Item
+                </button>
+            </div>
+        </form>
+        <div class="item-filter">
+            <input class="mt-5 w-full text-[17px] mb-5 p-[10px]  border-b-[1px] border-solid border-[#ccc] bg-transparent outline-none" type="text" id="filter" placeholder="Filter Items">
+        </div>
+        <ul id="item-list" class="mt-5 flex flex-wrap">
+            <li class="flex justify-between md:w-[45%] w-full border-[1px] border-solid border-[#ccc] rounded-md py-[10px] px-[15px] mx-1 mb-5 font-bold">
+                Apples
+                <button class="remove-item btn-link text-red-600">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </li>
+            <li class="flex justify-between md:w-[45%] w-full border-[1px] border-solid border-[#ccc] rounded-md py-[10px] px-[15px] mx-1 mb-5 font-bold">
+                Orange Juice
+                <button class="remove-item btn-link text-red-600">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </li>
+            <li class="flex justify-between md:w-[45%] w-full border-[1px] border-solid border-[#ccc] rounded-md py-[10px] px-[15px] mx-1 mb-5 font-bold">
+                Oreos
+                <button class="remove-item btn-link text-red-600">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </li>
+            <li class="flex justify-between md:w-[45%] w-full border-[1px] border-solid border-[#ccc] rounded-md py-[10px] px-[15px] mx-1 mb-5 font-bold">
+                Milk
+                <button class="remove-item btn-link text-red-600">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </li>
+        </ul>
+        <button class="mt-5 w-full text-[16px] bg-transparent text-[#333] border-[1px] border-solid border-[#ccc] rounded-md py-[10px] px-5 cursor-pointer hover:bg-[#f1f1f1]" id="clear">Clear All</button>
+    </div>
+</body>
+</html>
