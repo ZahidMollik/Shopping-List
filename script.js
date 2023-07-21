@@ -18,12 +18,22 @@ function addItem(e){
         alert('Please add an item');
         return;
     }
+    else{
+        if(checkIfItemExist(newItem)){
+            alert('That item already exists!');
+            return;
+        }
+    }
     addToDOM(newItem);
     addItemToStorage(newItem);
     checkUI();
     itemInput.value='';
 }
 
+function checkIfItemExist(item){
+    const itemFromStorage=getItemFromStorage();
+    return itemFromStorage.includes(item);
+}
 
 function addItemToStorage(item){
     let itemFromStorage=getItemFromStorage();
@@ -94,6 +104,7 @@ function clearItems(e){
     while (itemList.firstChild) {
         itemList.firstChild.remove();
     }
+    localStorage.removeItem('items');
     checkUI();
 }
 
